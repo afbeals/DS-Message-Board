@@ -1,10 +1,28 @@
 <div ng-contoller="TopicsController" class="" style="margin: 100px 450px">
-    <h4>Hello!</h4>
-    <h4>Please login with your username and password</h4>
-    <form class="">
-      <input type="text" id="login_name" placeholder="Userame" class="" style="display: inline-block" ng-model="login_user.name" />
-      <input type="text" id="login_password" placeholder="password" class="" style="display: inline-block" ng-model="login_user.name" />
-      <a href="#/dashboard"><button style="display: block; float: right" class="" id="Get_User_Name" ng-click="loginUser()">Enter</button></a>
-    </form>
-    <p>Don't have one? No worries, <a href="#">Sign Up!</a>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <h4>Add a new Topic</h4>
+      <form class="form-inline">
+        <label class='col-lg-12'>
+          Topic Title: <input style="float: right" type="text" ng-model="add_topic.title" class="form-control" />
+        </label>
+        <label class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+          User: <input style="float: right;"type="text" ng-model="add_topic.user" class="form-control" />
+        </label>
+        <label class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+          <div class="form-group">
+            <label for="topic_group">Select Category</label>
+            <select class="form-control" id="topic_group" ng-model="add_topic.category">
+              <option value="support">Support</option>
+              <option value="dev">Dev</option>
+              <option value="launch">Launch</option>
+              <option value="design">Design</option>
+            </select>
+          </div>
+        </label>
+        <label class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+          Description: <input  style="float: right; height: 175px; width: 250px"type="text" ng-model="add_topic.description" class="form-control" />
+        </label>
+        <button ng-click="addTopic()" class="form-control" style="float: right;">Submit</button>
+      </form>
+    </div>
   </div>
